@@ -15,8 +15,8 @@ import java.util.Arrays;
 
 /**
  * 统一封装响应对象
- *
- * @author xo
+ * @author liuyunshengsir
+ * @date 2019-08-02 23:10:24
  */
 @Slf4j
 @RestControllerAdvice

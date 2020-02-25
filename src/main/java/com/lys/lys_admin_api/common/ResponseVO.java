@@ -4,10 +4,10 @@ package com.lys.lys_admin_api.common;
 import lombok.Data;
 
 /**
- * 返回数据
+ * 统一封装返回数据
  *
- * @author xo
- * @date 2018-08-02 14:10:24
+ * @author liuyunshengsir
+ * @date 2019-08-02 23:10:24
  */
 @Data
 public class ResponseVO<T> {
