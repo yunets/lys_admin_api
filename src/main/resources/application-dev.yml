@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: QQww@1122
+    url: jdbc:mysql://10.6.6.192:30006/lys?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.lys.lys_admin_api.module.demo.sys.model
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
