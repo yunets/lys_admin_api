@@ -37,7 +37,7 @@ public class Swagger2Config {
                 .title("刘云生 RESTful API")
                 .description("邮箱：578888218@qq.com")
                 .description("博客地址：https://blog.csdn.net/liuyunshengsir/")
-                .termsOfServiceUrl("https://blog.csdn.net/liuyunshengsir/")
+                .termsOfServiceUrl("http://localhost:8080/swagger-ui.html")
                 .version("1.0")
                 .build();
     }
