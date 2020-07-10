@@ -5,7 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.google.common.collect.ImmutableMap;
 import com.lys.lys_admin_api.module.sys.mapper.SysUserMapper;
 import com.lys.lys_admin_api.module.sys.model.SysUser;
-import com.lys.lys_admin_api.module.demo.sys.model.dto.SysUserDTO;
+import com.lys.lys_admin_api.module.sys.model.dto.SysUserDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ import java.util.Map;
 @Api(tags = "用户")
 @RestController
 @Slf4j
-@RequestMapping("/sys/user")
+@RequestMapping("/sys/user11")
 public class UserController {
 
     @Autowired

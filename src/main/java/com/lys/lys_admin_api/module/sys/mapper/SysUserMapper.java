@@ -2,7 +2,7 @@ package com.lys.lys_admin_api.module.sys.mapper;
 
 
 import com.lys.lys_admin_api.module.sys.model.SysUser;
-import com.lys.lys_admin_api.module.demo.sys.model.dto.SysUserDTO;
+import com.lys.lys_admin_api.module.sys.model.dto.SysUserDTO;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;
 
@@ -20,7 +20,7 @@ public interface SysUserMapper {
     SysUser selectByPrimaryKey(String id);
 
 
-    List<SysUser> selectAll(SysUserDTO sysUsserDTO);
+    List<SysUser> selectAll(SysUserDTO sysUserDTO);
 
     int updateByPrimaryKeySelective(SysUser record);
 

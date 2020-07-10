@@ -1,4 +1,4 @@
-package com.lys.lys_admin_api.module.demo.sys.model.dto;
+package com.lys.lys_admin_api.module.sys.model.dto;
 
 import com.lys.lys_admin_api.common.bean.BasePageBean;
 import lombok.Data;
