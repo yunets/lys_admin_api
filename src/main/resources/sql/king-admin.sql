@@ -29,7 +29,7 @@ CREATE TABLE `sys_menu` (
   `icon` varchar(50) DEFAULT NULL COMMENT '菜单图标',
   `title` varchar(50) DEFAULT NULL COMMENT '菜单标题',
   `level` int(11) DEFAULT NULL COMMENT '菜单层级',
-  `order` int(11) DEFAULT NULL COMMENT '排序',
+  `order_no` int(11) DEFAULT NULL COMMENT '排序',
   `create_user_id` varchar(32) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   `update_user_id` varchar(32) DEFAULT NULL,
