@@ -27,8 +27,15 @@ public class SysUserController {
 
 
     @ApiOperation("用户分页")
-    @PostMapping("/selectAll1")
+    @PostMapping("/selectAll")
     public Object selectAll(@RequestBody SysUserDTO sysUserDTO)
+    {
+        return sysUserService.users(sysUserDTO);
+    }
+
+    @ApiOperation("用户分页")
+    @PostMapping("/selectAll")
+    public Object selectCurrentUser(@RequestBody SysUserDTO sysUserDTO)
     {
         return sysUserService.users(sysUserDTO);
     }

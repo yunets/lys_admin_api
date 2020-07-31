@@ -60,3 +60,9 @@ logging:
   file: D:/lys.log
 
 
+websocket:
+  hostName: localhost
+  port: 9096
+  upgradeTimeout: 10000
+  pingInterval: 25000
+  pingTimeout: 180000
