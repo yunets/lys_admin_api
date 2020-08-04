@@ -45,7 +45,7 @@ public class ResponseVOWrapAdvice implements ResponseBodyAdvice {
 	@Override
 	public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
 
-		if(body instanceof byte[] ||body instanceof ResponseVO || body instanceof ResponseEntity){
+		if(body instanceof byte[] ||body instanceof ResponseVO || body instanceof ResponseEntity||body instanceof String){
 			return body;
 		}
 
