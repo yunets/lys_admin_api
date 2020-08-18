@@ -1,7 +1,7 @@
 package com.lys.lys_admin_api.module.sys.controller;
 
+import com.lys.lys_admin_api.common.ResponseVO;
 import com.lys.lys_admin_api.module.sys.model.SysUser;
-import com.lys.lys_admin_api.module.sys.model.dto.SysUserDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 public class UserController {
     @ApiOperation("获取当前用户")
-    @PostMapping("/login")
+    @PostMapping("login")
     public Object login(@RequestParam("username") String username, @RequestParam("password") String password)
     {
         // 从SecurityUtils里边创建一个 subject
@@ -50,17 +50,35 @@ public class UserController {
             return "登录失败";
         }
 
-
-
-
     }
 
     @ApiOperation("获取当前用户")
-    @GetMapping("/currentUser")
+    @GetMapping("api/currentUser")
     public Object currentUser()
     {
         Subject s=SecurityUtils.getSubject();
         SysUser user = (SysUser) s.getPrincipal();
+        if(user==null){
+            return ResponseVO.error("用户未登录");
+        }
         return user;
+    }
+
+
+    /**
+     * shiro注销，shiro会自动把session释放，所以不需要调用session.invalidate();方法
+     */
+    @ApiOperation("获取当前用户")
+    @GetMapping("/logout")
+    public void logout(){
+        Subject currentUser = SecurityUtils.getSubject();
+        currentUser.logout();
+    }
+
+    @ApiOperation("获取当前用户")
+    @GetMapping("notLogin")
+    public Object notLogin()
+    {
+         return ResponseVO.error("用户未登录");
     }
 }

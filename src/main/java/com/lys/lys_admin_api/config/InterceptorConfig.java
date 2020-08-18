@@ -2,6 +2,7 @@ package com.lys.lys_admin_api.config;/**
  * Created by lys on 2019/4/15.
  */
 
+import com.lys.lys_admin_api.common.interceptor.CorsInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -19,7 +20,7 @@ public class InterceptorConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         super.addInterceptors(registry);
-        // registry.addInterceptor(new CorsInterceptor()).addPathPatterns("/**");
+         registry.addInterceptor(new CorsInterceptor()).addPathPatterns("/**");
       // registry.addInterceptor(new LoginInterceptor()).excludePathPatterns("/login/*").excludePathPatterns("/static/*");
     }
 
