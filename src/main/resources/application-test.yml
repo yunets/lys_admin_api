@@ -14,7 +14,7 @@ spring:
     suffix: .html
     mode: LEGACYHTML5
   datasource:
-    url: jdbc:mysql://10.10.8.13:3309/test01?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://10.150.10.63:3309/test01?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: xdata123
     driver-class-name: com.mysql.jdbc.Driver
@@ -61,8 +61,15 @@ logging:
 
 
 websocket:
-  hostName: localhost
+  hostname: 10.6.1.22
   port: 9096
   upgradeTimeout: 10000
   pingInterval: 25000
   pingTimeout: 180000
+
+
+cas:
+  server:
+    url: http://ipass.qust.edu.cn/tpass
+  project:
+    url: http://10.6.1.22:8080
